@@ -8,16 +8,19 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home">MyBrand</a>
+        </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
         </ul>
     </nav>
-
+    
     <!-- Home Section -->
     <section id="home">
         <div class="home-content">
@@ -28,32 +31,59 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a dedicated web developer with experience in creating beautiful and functional websites.
-            My focus is on delivering high-quality solutions tailored to client needs.
-        </p>
+    <section id="about" class="about-section">
+        <h2>Who Am I?</h2>
+        <div class="about-content">
+            <img src="myphoto.png" alt="About Me Photo" class="about-photo">
+            <div class="about-text">
+                <p>
+                    Hello! I'm a passionate <strong>web developer</strong> who thrives on turning ideas into reality.
+                    With a knack for designing elegant, user-friendly websites and a deep understanding of cutting-edge 
+                    technologies, I aim to create digital experiences that leave a lasting impression.
+                </p>
+                <p>
+                    Whether it's crafting seamless user interfaces or building robust backend solutions, 
+                    I believe every line of code tells a story—let's make it a masterpiece together!
+                </p>
+            </div>
+        </div>
     </section>
+    
 
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
             <div class="skill">
-                <h3>HTML</h3>
-                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                <div class="skill-header">
+                    <i class="fas fa-code"></i>
+                    <h3>HTML</h3>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
             </div>
             <div class="skill">
-                <h3>CSS</h3>
-                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                <div class="skill-header">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
             </div>
             <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                <div class="skill-header">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Projects Section -->
     <section id="projects" class="section">
@@ -63,19 +93,30 @@
                 <div class="project-image">
                 </div>
                 <div class="project-details">
-                    <h3>Project 1</h3>
-                    <p>A brief description of your project, highlighting the key features and technologies used.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <h3>Mini Project: Blood Donation System</h3>
+                    <p>This project is a web application developed to manage blood donation activities. It allows users to register, update their availability, and helps hospitals or patients search for blood donations based on blood group.</p>
+                    <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                    <a href="http://127.0.0.1:3006/index.html" class="btn" target="_blank">View Project</a>
                 </div>
+                
             </div>
             <div class="project-card">
-                <div class="project-image">
-                </div>
                 <div class="project-details">
-                    <h3>Project 2</h3>
-                    <p>A brief description of your project, highlighting the key features and technologies used.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <h3>Project 2: Dynamic Portfolio Website</h3>
+                    <p>
+                        A modern and interactive portfolio website designed to showcase my skills, projects, and experiences.
+                        This website dynamically adapts to user interaction with smooth transitions and an engaging user interface.
+                    </p>
+                    <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, React, Node.js</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Responsive Design: Adaptable to any device, from mobile phones to desktops.</li>
+                        <li>Interactive UI: Smooth animations and transitions to enhance the user experience.</li>
+                        <li>Dynamic Content: Integrated with a backend to fetch project data in real time.</li>
+                    </ul>
+                    <a href="http://127.0.0.1:3002/index.html" class="btn" target="_blank">View Project</a>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -83,14 +124,18 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out! I'd love to hear from you.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
+    
 
     <footer>
         <p>&copy; 2024 Ranganath K N. All Rights Reserved.</p>
