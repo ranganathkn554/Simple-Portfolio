@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <a href="#home">MyBrand</a>
+            <a href="#home">It's My..</a>
         </div>
         <ul class="nav-links">
             <li><a href="#home" class="nav-item">Home</a></li>
@@ -32,9 +34,12 @@
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <h2>Who Am I?</h2>
+        <h2>This is </h2>
         <div class="about-content">
-            <img src="myphoto.png" alt="About Me Photo" class="about-photo">
+            <div class="portfolio-photo">
+                <img src="myphoto.png" alt="About Me Photo" class="about-photo">
+                <div class="overlay">I am Ranganath K N!</div>
+            </div>
             <div class="about-text">
                 <p>
                     Hello! I'm a passionate <strong>web developer</strong> who thrives on turning ideas into reality.
@@ -48,8 +53,6 @@
             </div>
         </div>
     </section>
-    
-
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
@@ -93,10 +96,10 @@
                 <div class="project-image">
                 </div>
                 <div class="project-details">
-                    <h3>Mini Project: Blood Donation System</h3>
+                    <h3>Mini Project: E-Blood Donation System</h3>
                     <p>This project is a web application developed to manage blood donation activities. It allows users to register, update their availability, and helps hospitals or patients search for blood donations based on blood group.</p>
                     <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-                    <a href="http://127.0.0.1:3006/index.html" class="btn" target="_blank">View Project</a>
+                    <a href="https://github.com/ranganathkn554/E-BLOOD-BANKING-SYSTEM.git" class="btn" target="_blank">View Project</a>
                 </div>
                 
             </div>
@@ -108,13 +111,13 @@
                         This website dynamically adapts to user interaction with smooth transitions and an engaging user interface.
                     </p>
                     <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, React, Node.js</p>
-                    <p><strong>Key Features:</strong></p>
+                    <!-- <p><strong>Key Features:</strong></p>
                     <ul>
                         <li>Responsive Design: Adaptable to any device, from mobile phones to desktops.</li>
                         <li>Interactive UI: Smooth animations and transitions to enhance the user experience.</li>
                         <li>Dynamic Content: Integrated with a backend to fetch project data in real time.</li>
-                    </ul>
-                    <a href="http://127.0.0.1:3002/index.html" class="btn" target="_blank">View Project</a>
+                    </ul> -->
+                    <a href="https://github.com/ranganathkn554/Simple-Portfolio.git" class="btn" target="_blank">View Project</a>
                 </div>
                 
             </div>
@@ -139,8 +142,35 @@
 
     <footer>
         <p>&copy; 2024 Ranganath K N. All Rights Reserved.</p>
-    </footer>
+    </footer>   
+    <!-- Remaining Sections (Skills, Projects, Contact, Footer) -->
+    <!-- (Unchanged for brevity, except hover and styling adjustments) -->
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Smooth Scroll for Navigation Links
+            $('nav a').on('click', function (e) {
+                e.preventDefault();
+                const targetSection = $($(this).attr('href'));
+                $('html, body').animate({
+                    scrollTop: targetSection.offset().top
+                }, 'slow');
+            });
+
+            // Hover Effect for Portfolio Photo
+            $('.portfolio-photo').on('mouseenter', function () {
+                $(this).find('img').css('transform', 'scale(1.1)');
+                $(this).find('.overlay').css('opacity', '1');
+            });
+
+            $('.portfolio-photo').on('mouseleave', function () {
+                $(this).find('img').css('transform', 'scale(1)');
+                $(this).find('.overlay').css('opacity', '0');
+            });
+        });
+    </script>
 </body>
 </html>
