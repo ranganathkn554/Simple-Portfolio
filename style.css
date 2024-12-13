@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     background: #f9f9f9;
 }
 
-/* Navigation */
+
 nav {
     position: fixed;
     width: 100%;
@@ -41,7 +41,7 @@ nav {
     color: #007bff;
 }
 
-/* Section Styles */
+
 section {
     padding: 4rem 2rem;
     text-align: center;
@@ -60,7 +60,7 @@ section p {
     margin: 0 auto 2rem;
 }
 
-/* Home Section */
+
 #home {
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@ section p {
     background: #ffc107;
 }
 
-/* Skills Section */
+
 .skills-container {
     display: flex;
     justify-content: center;
@@ -124,7 +124,7 @@ section p {
     transition: width 1s ease;
 }
 
-/* Projects Section */
+
 .project-cards {
     display: flex;
     justify-content: center;
@@ -170,7 +170,7 @@ section p {
     margin-bottom: 20px;
 }
 
-/* Button */
+
 .project-details .btn {
     display: inline-block;
     padding: 10px 15px;
@@ -186,8 +186,6 @@ section p {
     background: #ff9a85;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Contact Section */
 form input, form textarea {
     width: 100%;
     padding: 0.8rem;
@@ -201,7 +199,7 @@ form button {
     width: 100%;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 1rem 0;
@@ -209,7 +207,6 @@ footer {
     color: #fff;
 }
 
-/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -258,7 +255,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* For Mobile Screens */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
@@ -274,12 +270,7 @@ footer {
         font-size: 2.5rem;
     }
 }
-.about-photo {
-    width: 100%;      /* Adjusts the width to 100% of its parent container */
-    max-width: 200px; /* Maximum width, adjust to fit your design */
-    height: 30;     /* Maintains aspect ratio */
-    border-radius: 10%; /* Optional: to make the image circular */
-}#skills {
+#skills {
     background: #f8f9fa;
     padding: 4rem 2rem;
     text-align: center;
@@ -343,7 +334,7 @@ footer {
     height: 100%;
     background: #007bff;
     border-radius: 4px;
-    animation: progressAnimation 1s ease-out forwards;
+    animation: progressAnimation 1s ease-in backwards;
 }
 
 @keyframes progressAnimation {
@@ -355,16 +346,16 @@ footer {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .skills-container {
         flex-direction: column;
         align-items: center;
     }
 }
-/* Contact Section Styling */
+
 #contact {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background for vibrancy */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     padding: 5rem 0;
     display: flex;
     justify-content: center;
@@ -373,11 +364,11 @@ footer {
 
 .contact-container {
     background: #fff;
-    border-radius: 10px;
-    padding: 2rem 3rem;
+    border-radius: 5px;
+    padding: 1rem 1rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px; /* Container width */
+    width: 50%;
+    max-width: 500px;
     text-align: center;
     transform: translateY(-50px);
     animation: slideIn 1s ease-out;
@@ -427,7 +418,7 @@ form button:hover {
     background: #feb47b;
 }
 
-/* Animation */
+
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -439,7 +430,7 @@ form button:hover {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .contact-container {
         padding: 2rem;
